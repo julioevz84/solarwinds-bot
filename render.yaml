@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: solarwinds-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn main:app -b 0.0.0.0:$PORT --timeout 120"
